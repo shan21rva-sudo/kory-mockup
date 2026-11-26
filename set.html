@@ -63,23 +63,21 @@ html{scroll-behavior:smooth}
 <section style="max-width:1200px;margin:0 auto;padding:24px clamp(16px,2.5vw,24px) clamp(26px,3.33vw,48px);box-sizing:border-box;display:flex;flex-wrap:wrap;gap:clamp(24px,3.33vw,48px);align-items:flex-start">
 
 <div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:14px">
-<div style="position:relative;border-radius:999px 999px 44px 44px;overflow:hidden;background:#F9D2CB" onTouchStart="{{ ts }}" onTouchEnd="{{ te }}">
-<div style="display:flex;width:100%;transition:transform .35s ease;transform:translateX({{ shift }})">
+<div style="position:relative;border-radius:999px 999px 44px 44px;overflow:hidden;background:#F9D2CB" id="kgal">
+<div id="kslide" style="display:flex;width:100%;transition:transform .35s ease;transform:translateX(0%)">
 <div style="flex:0 0 100%;min-width:0"><img src="assets/e62526108b33895a65a9492004fe6b7f.jpg" alt="Caja 3 STEPS del Kit PIEL CLARA" style="display:block;width:100%;height:clamp(347px,38.89vw,560px);object-fit:cover;object-position:center 55%"></div>
 <div style="flex:0 0 100%;min-width:0"><img src="assets/17dc120ad391b3cee908ae4b4bfb5f84.jpg" alt="Los tres parches y la caja, vista desde arriba" style="display:block;width:100%;height:clamp(347px,38.89vw,560px);object-fit:cover"></div>
 <div style="flex:0 0 100%;min-width:0"><img src="assets/e9fc62125ec976e9091dba38c16a90a2.jpg" alt="Los tres sobres del sistema Spot Eraser" style="display:block;width:100%;height:clamp(347px,38.89vw,560px);object-fit:cover"></div>
 <div style="flex:0 0 100%;min-width:0"><img src="assets/fbad150bee882b281cadd30135102725.jpg" alt="Parche verde con su sobre" style="display:block;width:100%;height:clamp(347px,38.89vw,560px);object-fit:cover"></div>
 </div>
-<button type="button" aria-label="Foto anterior" onClick="{{ prev }}" style="position:absolute;left:14px;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:999px;border:0;background:#FFFBF2;cursor:pointer;display:flex;align-items:center;justify-content:center">
+<button type="button" aria-label="Foto anterior" onclick="kGo(-1)" style="position:absolute;left:14px;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:999px;border:0;background:#FFFBF2;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2B1A1C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
-<button type="button" aria-label="Foto siguiente" onClick="{{ next }}" style="position:absolute;right:14px;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:999px;border:0;background:#FFFBF2;cursor:pointer;display:flex;align-items:center;justify-content:center">
+<button type="button" aria-label="Foto siguiente" onclick="kGo(1)" style="position:absolute;right:14px;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:999px;border:0;background:#FFFBF2;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2B1A1C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
-<div style="position:absolute;right:14px;bottom:14px;background:#2B1A1C;color:#FFFBF2;font-size:clamp(16px,1.18vw,17px);font-weight:700;padding:5px 12px;border-radius:999px">{{ counter }}</div>
+<div style="position:absolute;right:14px;bottom:14px;background:#2B1A1C;color:#FFFBF2;font-size:clamp(16px,1.18vw,17px);font-weight:700;padding:5px 12px;border-radius:999px"><span id="kcount">1 / 4</span></div>
 </div>
 <div style="display:flex;gap:12px">
-<div style="display:contents">
-<button type="button" aria-label="{{ t.label }}" onClick="{{ t.pick }}" style="{{ t.style }}"><img src="{{ t.src }}" alt="" style="display:block;width:100%;height:96px;object-fit:cover"></button>
-</div>
+<button type="button" class="kth" aria-label="Ver foto 1" onclick="kGo(0,true)" style="flex:1;padding:0;overflow:hidden;border-radius:24px;background:none;cursor:pointer;border:3px solid #DC0C23"><img src="assets/e62526108b33895a65a9492004fe6b7f.jpg" alt="" style="display:block;width:100%;height:96px;object-fit:cover"></button><button type="button" class="kth" aria-label="Ver foto 2" onclick="kGo(1,true)" style="flex:1;padding:0;overflow:hidden;border-radius:24px;background:none;cursor:pointer;border:3px solid transparent"><img src="assets/17dc120ad391b3cee908ae4b4bfb5f84.jpg" alt="" style="display:block;width:100%;height:96px;object-fit:cover"></button><button type="button" class="kth" aria-label="Ver foto 3" onclick="kGo(2,true)" style="flex:1;padding:0;overflow:hidden;border-radius:24px;background:none;cursor:pointer;border:3px solid transparent"><img src="assets/e9fc62125ec976e9091dba38c16a90a2.jpg" alt="" style="display:block;width:100%;height:96px;object-fit:cover"></button><button type="button" class="kth" aria-label="Ver foto 4" onclick="kGo(3,true)" style="flex:1;padding:0;overflow:hidden;border-radius:24px;background:none;cursor:pointer;border:3px solid transparent"><img src="assets/fbad150bee882b281cadd30135102725.jpg" alt="" style="display:block;width:100%;height:96px;object-fit:cover"></button>
 </div>
 <div style="font-size:clamp(16px,1.18vw,17px);color:#5A3D40;text-align:center">Desliza o usa las flechas para ver las 4 fotos</div>
 </div>
@@ -98,7 +96,7 @@ html{scroll-behavior:smooth}
 </div>
 <p style="margin:0;font-size:clamp(18px,1.46vw,21px);line-height:1.75;color:#5A3D40">Sistema de 3 pasos de NOLAHOUR para acompañar a tu piel en cada fase del brote: desde los primeros síntomas, pasando por la protección tras la extracción, hasta las marcas rojas que quedan después.</p>
 
-<div style="display:contents">
+
 <div style="background:#FCF1C3;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:14px">
 <span style="align-self:flex-start;font-size:16px;font-weight:700;background:#2B1A1C;color:#FFFBF2;padding:4px 10px;border-radius:999px">Agotado por ahora</span>
 <div style="font-weight:700;font-size:clamp(18px,1.46vw,21px)">Te avisamos apenas vuelva a estar disponible</div>
@@ -108,19 +106,14 @@ html{scroll-behavior:smooth}
 <button type="button" style="min-height:52px;padding:0 28px;border-radius:999px;border:0;background:#DC0C23;color:#FFFFFF;font-family:'Montserrat',sans-serif;font-size:clamp(17px,1.39vw,20px);font-weight:700;cursor:pointer">Avísame</button>
 </form>
 </div>
-</div>
-<div style="display:contents">
-<div style="display:flex;flex-direction:column;gap:12px">
-<button type="button" style="min-height:56px;border-radius:999px;border:0;background:#DC0C23;color:#FFFFFF;font-family:'Montserrat',sans-serif;font-size:clamp(17px,1.39vw,20px);font-weight:700;cursor:pointer">Añadir al carrito</button>
-<div style="font-size:clamp(16px,1.18vw,17px);color:#5A3D40">Tarjetas de crédito, débito y Yape · entorno seguro</div>
-</div>
-</div>
+
+
 
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
 <span style="font-size:clamp(16px,1.32vw,19px);font-weight:700;margin-right:4px">Compartir:</span>
-<a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Compartir por WhatsApp" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;background:#2B1A1C;color:#FFFBF2;text-decoration:none;font-size:clamp(16px,1.32vw,19px);font-weight:700"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFBF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
-<button type="button" onClick="{{ copy }}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(16px,1.32vw,19px);font-weight:700;cursor:pointer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2B1A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg>{{ copyLabel }}</button>
-<button type="button" onClick="{{ share }}" aria-label="Compartir con otras aplicaciones" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(16px,1.32vw,19px);font-weight:700;cursor:pointer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2B1A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"></path></svg>Más</button>
+<a id="kwa" href="https://wa.me/?text=Mira%20este%20kit%20de%20KORY" target="_blank" rel="noopener" aria-label="Compartir por WhatsApp" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;background:#2B1A1C;color:#FFFBF2;text-decoration:none;font-size:clamp(16px,1.32vw,19px);font-weight:700"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFBF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
+<button type="button" onclick="kCopy(this)" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(16px,1.32vw,19px);font-weight:700;cursor:pointer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2B1A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg><span>Copiar enlace</span></button>
+<button type="button" onclick="kShare()" aria-label="Compartir con otras aplicaciones" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;box-sizing:border-box;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(16px,1.32vw,19px);font-weight:700;cursor:pointer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2B1A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"></path></svg>Más</button>
 </div>
 
 <div style="border:1px solid #F3E3CA;border-radius:28px;background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:12px;font-size:clamp(16px,1.32vw,19px);line-height:1.6">
@@ -146,7 +139,7 @@ html{scroll-behavior:smooth}
 <!-- Descripción larga -->
 <section id="descripcion" style="background:#FFFFFF">
 <div style="max-width:860px;margin:0 auto;padding:clamp(26px,3.33vw,48px) clamp(16px,2.5vw,24px) 40px;box-sizing:border-box">
-<div style="position:relative;overflow:hidden;{{ descStyle }}">
+<div id="kdesc" style="position:relative;overflow:hidden;max-height:760px">
 <div style="display:flex;flex-direction:column;gap:clamp(24px,3.89vw,56px)">
 
 <div style="border-radius:44px;background:#DC0C23;color:#FFFFFF;padding:40px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:center">
@@ -244,12 +237,12 @@ html{scroll-behavior:smooth}
 </div>
 
 </div>
-<div style="display:contents">
-<div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(to bottom,rgba(255,255,255,0),#FFFFFF 85%)"></div>
-</div>
+
+<div class="kfade" style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(to bottom,rgba(255,255,255,0),#FFFFFF 85%)"></div>
+
 </div>
 <div style="display:flex;justify-content:center;padding-top:20px">
-<button type="button" onClick="{{ toggle }}" aria-expanded="{{ expanded }}" style="min-height:56px;min-width:280px;padding:0 32px;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.46vw,21px);font-weight:700;cursor:pointer">{{ toggleLabel }}</button>
+<button type="button" id="ktog" onclick="kToggle()" aria-expanded="false" style="min-height:56px;min-width:280px;padding:0 32px;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.46vw,21px);font-weight:700;cursor:pointer">Ver más descripción</button>
 </div>
 </div>
 </section>
@@ -352,4 +345,4 @@ html{scroll-behavior:smooth}
 
 <input type="checkbox" id="ckok" class="ckchk"><div class="cookiebar" role="dialog" aria-label="Cookies"><div style="flex:1 1 360px;font-size:16px;line-height:1.7">Usamos cookies para que la tienda funcione y para mejorar tu experiencia. Puedes aceptar todas o solo las necesarias. <a href="politicas.html#cookies">Más información</a></div><div style="display:flex;flex-wrap:wrap;gap:12px"><label for="ckok" style="border:2px solid #DC0C23;color:#DC0C23">Solo necesarias</label><label for="ckok" style="background:#DC0C23;color:#FFFFFF">Aceptar todas</label></div></div>
 </div>
-</body></html>
+<script>var kI=0,kN=4;function kGo(d,abs){kI=abs?d:(kI+d+kN)%kN;document.getElementById("kslide").style.transform="translateX("+(-100*kI)+"%)";document.getElementById("kcount").textContent=(kI+1)+" / "+kN;var b=document.querySelectorAll(".kth");for(var i=0;i<b.length;i++)b[i].style.borderColor=i==kI?"#DC0C23":"transparent"}function kCopy(b){var s=b.querySelector("span");function ok(){s.textContent="¡Enlace copiado!";setTimeout(function(){s.textContent="Copiar enlace"},2000)}try{navigator.clipboard.writeText(location.href).then(ok,ok)}catch(e){ok()}}function kShare(){try{if(navigator.share)navigator.share({title:"KORY · Kit PIEL CLARA",url:location.href})}catch(e){}}function kToggle(){var d=document.getElementById("kdesc"),t=document.getElementById("ktog"),o=t.getAttribute("aria-expanded")=="true";d.style.maxHeight=o?"760px":"none";t.setAttribute("aria-expanded",o?"false":"true");t.textContent=o?"Ver más descripción":"Ver menos";var f=d.querySelector(".kfade");if(f)f.style.display=o?"block":"none"}(function(){var a=document.getElementById("kwa");if(a)a.href="https://wa.me/?text="+encodeURIComponent("Mira este kit de KORY: Kit PIEL CLARA Anti-Imperfecciones (NOLAHOUR Spot Eraser) "+location.href)})();var g=document.getElementById("kgal"),x0=0;g.addEventListener("touchstart",function(e){x0=e.touches[0].clientX});g.addEventListener("touchend",function(e){var d=e.changedTouches[0].clientX-x0;if(d<-40)kGo(1);else if(d>40)kGo(-1)});</script></body></html>

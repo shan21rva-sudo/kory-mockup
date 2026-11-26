@@ -6,7 +6,7 @@
 <!-- SECTION START -->
 <section id="descripcion" style="background:#FFFFFF">
 <div style="max-width:860px;margin:0 auto;padding:clamp(26px,3.33vw,48px) clamp(16px,2.5vw,24px) 40px;box-sizing:border-box">
-<div style="position:relative;overflow:hidden;{{ descStyle }}">
+<div id="kdesc" style="position:relative;overflow:hidden;max-height:760px">
 <div style="display:flex;flex-direction:column;gap:clamp(24px,3.89vw,56px)">
 <div style="border-radius:44px;background:#DC0C23;color:#FFFFFF;padding:40px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:center">
 <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px">
@@ -96,12 +96,10 @@
 </tbody></table>
 </div>
 </div>
-<div style="display:contents">
-<div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(to bottom,rgba(255,255,255,0),#FFFFFF 85%)"></div>
-</div>
+<div class="kfade" style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(to bottom,rgba(255,255,255,0),#FFFFFF 85%)"></div>
 </div>
 <div style="display:flex;justify-content:center;padding-top:20px">
-<button aria-expanded="{{ expanded }}" onclick="{{ toggle }}" style="min-height:56px;min-width:280px;padding:0 32px;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.46vw,21px);font-weight:700;cursor:pointer" type="button">{{ toggleLabel }}</button>
+<button aria-expanded="false" id="ktog" onclick="kToggle()" style="min-height:56px;min-width:280px;padding:0 32px;border-radius:999px;border:2px solid #2B1A1C;background:#FFFFFF;color:#2B1A1C;font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.46vw,21px);font-weight:700;cursor:pointer" type="button">Ver más descripción</button>
 </div>
 </div>
 </section>
