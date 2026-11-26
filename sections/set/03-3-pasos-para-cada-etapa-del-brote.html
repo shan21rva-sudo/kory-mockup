@@ -2,8 +2,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../base.css"></head><body>
-<!-- KORY mockup section | page: set | name: descripcion | Visual reference only: rebuild as a Liquid section/theme block. Replace ../../assets/ with the real image URLs. -->
+<!-- KORY mockup section | page: set | name: 3-pasos-para-cada-etapa-del-brote | Visual reference only: rebuild as a Liquid section/theme block. Replace ../../assets/ with the real image URLs. -->
 <!-- SECTION START -->
+<div class="kbuywrap">
+<!-- Pestañas fijas -->
+<nav aria-label="Secciones del producto" style="position:sticky;top:0;z-index:20;background:#FFFBF2;border-top:1px solid #F3E3CA;border-bottom:1px solid #F3E3CA">
+<div style="max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:flex">
+<a href="#descripcion" style="flex:1;min-height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#2B1A1C;font-size:clamp(17px,1.39vw,20px);font-weight:700;border-bottom:3px solid #DC0C23">Descripción</a>
+<a href="#resenas" style="flex:1;min-height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#5A3D40;font-size:clamp(17px,1.39vw,20px);font-weight:600;border-bottom:3px solid transparent">Reseñas <span style="margin-left:6px;color:#A8081A;font-weight:700">0</span></a>
+<a href="#preguntas" style="flex:1;min-height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#5A3D40;font-size:clamp(17px,1.39vw,20px);font-weight:600;border-bottom:3px solid transparent">Preguntas <span style="margin-left:6px;color:#A8081A;font-weight:700">0</span></a>
+</div>
+</nav>
+<!-- Descripción larga -->
 <section id="descripcion" style="background:#FFFFFF">
 <div style="max-width:860px;margin:0 auto;padding:clamp(26px,3.33vw,48px) clamp(16px,2.5vw,24px) 40px;box-sizing:border-box">
 <div id="kdesc" style="position:relative;overflow:hidden;max-height:760px">
@@ -103,5 +113,51 @@
 </div>
 </div>
 </section>
+<!-- Reseñas -->
+<section id="resenas" style="background:#FFFBF2;border-top:1px solid #F3E3CA">
+<div style="max-width:860px;margin:0 auto;padding:clamp(48px,6.11vw,88px) clamp(16px,2.5vw,24px);box-sizing:border-box;display:flex;flex-direction:column;gap:28px">
+<h2 style="margin:0;font-family:'Amaranth',sans-serif;font-weight:500;font-size:clamp(25px,2.78vw,40px);line-height:1.15">Reseñas <span style="color:#A8081A">(0)</span></h2>
+<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:#FFFFFF;border:1px solid #F3E3CA;border-radius:36px;padding:28px">
+<div style="flex:0 0 140px;text-align:center"><div style="font-family:'Amaranth',sans-serif;font-size:clamp(36px,4.51vw,65px);font-weight:700;line-height:1">0.0</div><div style="font-size:clamp(16px,1.32vw,19px);color:#5A3D40;margin-top:6px">de 5</div></div>
+<div style="flex:1 1 280px;display:flex;flex-direction:column;gap:8px;font-size:clamp(16px,1.18vw,17px);color:#5A3D40">
+<div style="display:flex;align-items:center;gap:10px"><span style="width:32px">5 ★</span><div style="flex:1;height:8px;border-radius:999px;background:#F3E3CA"></div><span style="width:24px;text-align:right">0</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="width:32px">4 ★</span><div style="flex:1;height:8px;border-radius:999px;background:#F3E3CA"></div><span style="width:24px;text-align:right">0</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="width:32px">3 ★</span><div style="flex:1;height:8px;border-radius:999px;background:#F3E3CA"></div><span style="width:24px;text-align:right">0</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="width:32px">2 ★</span><div style="flex:1;height:8px;border-radius:999px;background:#F3E3CA"></div><span style="width:24px;text-align:right">0</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="width:32px">1 ★</span><div style="flex:1;height:8px;border-radius:999px;background:#F3E3CA"></div><span style="width:24px;text-align:right">0</span></div>
+</div>
+</div>
+<div style="border:2px dashed #F3E3CA;border-radius:36px;padding:clamp(22px,2.50vw,36px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+<div style="font-size:clamp(17px,1.39vw,20px);font-weight:700">Aún no hay reseñas</div>
+<p style="margin:0;font-size:clamp(17px,1.39vw,20px);line-height:1.7;color:#5A3D40;max-width:460px">Sé la primera persona en contar cómo te fue. Tu reseña con foto ayuda a otras clientas a elegir con confianza.</p>
+<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:999px;background:#DC0C23;color:#FFFFFF;text-decoration:none;font-size:clamp(17px,1.39vw,20px);font-weight:700">Escribir una reseña</a>
+</div>
+</div>
+</section>
+<!-- Preguntas -->
+<section id="preguntas" style="background:#FFFFFF;border-top:1px solid #F3E3CA">
+<div style="max-width:860px;margin:0 auto;padding:clamp(48px,6.11vw,88px) clamp(16px,2.5vw,24px);box-sizing:border-box;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font-family:'Amaranth',sans-serif;font-weight:500;font-size:clamp(25px,2.78vw,40px);line-height:1.15">Preguntas y respuestas <span style="color:#A8081A">(0)</span></h2>
+<form onsubmit="return false" style="display:flex;flex-wrap:wrap;gap:10px">
+<label for="pregunta" style="position:absolute;left:-9999px">Tu pregunta</label>
+<input id="pregunta" placeholder="¿Tienes alguna duda sobre este kit?" style="flex:1 1 300px;min-height:52px;box-sizing:border-box;padding:0 20px;border-radius:999px;border:2px solid #2B1A1C;background:#FFFBF2;font-family:'Montserrat',sans-serif;font-size:clamp(17px,1.39vw,20px);color:#2B1A1C" type="text"/>
+<button style="min-height:52px;padding:0 28px;border-radius:999px;border:0;background:#DC0C23;color:#FFFFFF;font-family:'Montserrat',sans-serif;font-size:clamp(17px,1.39vw,20px);font-weight:700;cursor:pointer" type="button">Preguntar</button>
+</form>
+<div style="font-size:clamp(16px,1.32vw,19px);color:#5A3D40;line-height:1.7">Aún no hay preguntas. Te respondemos por esta página y por WhatsApp.</div>
+<a href="../../faq.html" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:999px;border:2px solid #DC0C23;color:#DC0C23;text-decoration:none;font-weight:700;font-size:clamp(17px,1.39vw,20px)">Ver preguntas frecuentes</a>
+</div>
+</section>
+<!-- Relacionados -->
+<section style="background:#FCF1C3">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,6.11vw,88px) clamp(16px,2.5vw,24px);box-sizing:border-box;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font-family:'Amaranth',sans-serif;font-weight:500;font-size:clamp(25px,2.78vw,40px);line-height:1.15">También te puede gustar</h2>
+<div style="display:flex;flex-wrap:wrap;gap:20px">
+<a href="../../index.html#sets" style="flex:1 1 260px;min-width:0;text-decoration:none;color:#2B1A1C;background:#FFFFFF;border-radius:36px;overflow:hidden;display:flex;flex-direction:column"><img alt="Kit Ritual Coreano" src="../../assets/ac2dd26fa03b04a2365329bfa8d30f6b.webp" style="display:block;width:100%;height:220px;object-fit:cover"/><div style="padding:18px;font-weight:700">Kit Ritual Coreano</div></a>
+<a href="../../index.html#sets" style="flex:1 1 260px;min-width:0;text-decoration:none;color:#2B1A1C;background:#FFFFFF;border-radius:36px;overflow:hidden;display:flex;flex-direction:column"><img alt="Kit Escudo Andino" src="../../assets/12fb253d1b35ad5207d744d6b922fc53.webp" style="display:block;width:100%;height:220px;object-fit:cover"/><div style="padding:18px;font-weight:700">Kit Escudo Andino</div></a>
+<a href="../../navidad.html" style="flex:1 1 260px;min-width:0;text-decoration:none;color:#2B1A1C;background:#FFFFFF;border-radius:36px;overflow:hidden;display:flex;flex-direction:column"><img alt="Cremas hidratantes NOLAHOUR" src="../../assets/8572f639224b4abdfb74c72036f11b04.jpg" style="display:block;width:100%;height:220px;object-fit:cover;object-position:center"/><div style="padding:18px;font-weight:700">Paquetes de Navidad</div></a>
+</div>
+</div>
+</section>
+<div class="kbuy"><div style="max-width:1200px;margin:0 auto;padding:12px clamp(16px,2.5vw,24px);box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px"><div style="min-width:0"><div style="font-family:'Amaranth',sans-serif;font-size:clamp(18px,1.6vw,22px);font-weight:500;line-height:1.2">Kit PIEL CLARA Anti-Imperfecciones</div><div style="font-weight:700;color:#DC0C23;font-size:18px">S/ 403.70</div></div><div><a class="kbtn s" href="#contacto">Avísame cuando llegue</a></div></div></div></div>
 <!-- SECTION END -->
 </body></html>

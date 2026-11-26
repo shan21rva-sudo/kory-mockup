@@ -14,7 +14,7 @@ One file per section of the mockup, so each can be rebuilt as a Shopify section 
 | _shared | `breadcrumb.html` | cuenta, micuenta |  |
 | _shared | `cookie-bar.html` | blog, carrito, componentes, confirmacion, cuenta, envios, faq, index, kitescudo, kitritual, marcas, micuenta, navidad, nosotros, origen, pago, politicas, post, presentacion, producto, productos, reclamaciones, regalo, seguimiento, set |  |
 | _shared | `footer.html` | blog, carrito, componentes, confirmacion, cuenta, envios, faq, index, kitescudo, kitritual, marcas, micuenta, navidad, nosotros, origen, pago, politicas, post, presentacion, producto, productos, reclamaciones, regalo, seguimiento, set | **unconfirmed** |
-| _shared | `header.html` | blog, carrito, componentes, confirmacion, cuenta, envios, faq, kitescudo, kitritual, marcas, micuenta, navidad, nosotros, origen, pago, politicas, post, presentacion, producto, productos, reclamaciones, regalo, seguimiento, set |  |
+| _shared | `header.html` | blog, carrito, componentes, confirmacion, cuenta, envios, faq, kitescudo, kitritual, marcas, micuenta, navidad, nosotros, origen, pago, politicas, post, presentacion, producto, productos, reclamaciones, regalo, seguimiento, set | **unconfirmed**, form |
 | _shared | `preguntas-frecuentes.html` | kitescudo, kitritual | **unconfirmed** |
 | blog | `01-hero-noticias.html` | blog |  |
 | blog | `02-como-llegan-sus-cosmeticos-hasta-el-peru.html` | blog | **unconfirmed** |
@@ -35,7 +35,7 @@ One file per section of the mockup, so each can be rebuilt as a Shopify section 
 | faq | `01-breadcrumb.html` | faq |  |
 | faq | `02-hero-preguntas-frecuentes.html` | faq |  |
 | faq | `03-no-encontraste-tu-respuesta.html` | faq | **unconfirmed**, form |
-| index | `01-header.html` | index |  |
+| index | `01-header.html` | index | **unconfirmed**, form |
 | index | `02-hero-piel-radiante-directo-desde-corea.html` | index |  |
 | index | `03-sets.html` | index | **unconfirmed** |
 | index | `04-garantias.html` | index |  |
@@ -108,8 +108,4 @@ One file per section of the mockup, so each can be rebuilt as a Shopify section 
 | seguimiento | `03-consultar.html` | seguimiento | **unconfirmed**, form |
 | set | `01-breadcrumb.html` | set |  |
 | set | `02-hero-kit-piel-clara-anti-imperfecciones.html` | set | **unconfirmed**, form |
-| set | `03-secciones-del-producto.html` | set |  |
-| set | `04-descripcion.html` | set | **unconfirmed** |
-| set | `05-resenas.html` | set |  |
-| set | `06-preguntas.html` | set | form |
-| set | `07-tambien-te-puede-gustar.html` | set |  |
+| set | `03-3-pasos-para-cada-etapa-del-brote.html` | set | **unconfirmed**, form |
